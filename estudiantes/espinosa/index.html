@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariana Espinosa</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <header class="perfil">
+      <img src="espinosa.jpg" alt="Ariana Espinosa" class="perfil-img" />
+      <h1>Ariana Espinosa</h1>
+      <p>La callada del curso 🤐</p>
+    </header>
+
+ <section class="intereses">
+      <h2>Hobbys/ Actividades Extras</h2>
+      <ul>
+        <li>Entrenar</li>
+        <li>Salir a andar en bici🚲</li>
+       <li>Hacer curso de modelaje📸 </li>
+       </ul>
+    </section>
+
+    <section class="intereses">
+      <h2>Algunos de mis recuerdos de estos años</h2>
+      <ul>
+        <li>El viaje a Bariloche 💙</li>
+        <li>El campamento a Sierra de la Ventana⛰️</li>
+        <li>Amistades que hice en estos años 🫂</li>
+        <li>Primer dia del secundario🏫</li>
+      </ul>
+    </section>
+
+    <section class="intereses">
+      <h2>Algunos objetivos de la carrera🍏</h2>
+      <ul>
+        <li>Crear buenos hábitos de estudio</li>
+        <li>Mejorar mi forma de comunicar y explicar</li>
+        <li>Descubrir que área de la nutrición me gusta más</li>
+       
+      </ul>
+    </section>
+
+<section class="intereses"> 
+  <h2>TOP 3 de peliculas de la infancia</h2>
+  <ul> 
+    <li>Rapunzel💙</li> 
+    <li>Matilda</li> 
+    <li>Hannah Montana</li> 
+    </ul>
+
+      <img src="peliculas.jpg" alt="en clase" class="imagen-lateral" />
+   </section>
+
+
+
+
+    <section class="podcast">
+      <h2>🎧 Mi mensaje para mi YO del futuro</h2>
+      <audio controls>
+        <source src="Siempre Brillarás.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <section class="momentos">
+      <h2>Momentos inolvidables</h2>
+
+      <div class="carousel-fade">
+
+        <div class="slide active">
+          <img src="matematica.jpg" alt="Momento 1">
+          <div class="caption">
+            <h3>Previa a prueba</h3>
+            <p>Primera evalución del año</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="Italiano.jpg" alt="Momento 2">
+          <div class="caption">
+            <h3>Italiano🤌🏻</h3>
+            <p>Haciendo tiempo antes de entrar a Italiano</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="verdadera.jpg" alt="Momento 3">
+          <div class="caption">
+            <h3>Compañera de banco</h3>
+            <p>Desde primero juntas</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="parada.jpg" alt="Momento 4">
+          <div class="caption">
+            <h3>Todos los días 🚌 </h3>
+            <p>Yendo juntas a tomarnos en colectivo</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="brc.jpg" alt="Momento 5">
+          <div class="caption">
+            <h3>BRC</h3>
+            <p>Momentos siempre en mi 🩷</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="upd.jpg" alt="Momento 6">
+          <div class="caption">
+            <h3>UPD🎒</h3>
+            <p>Último Primer Día</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="LVEC.jpg" alt="Momento 7">
+          <div class="caption">
+            <h3>LVEC</h3>
+            <p>Último La vida es corto</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="muestra.jpg" alt="Momento 8">
+          <div class="caption">
+            <h3>Muestra de idiomas</h3>
+            <p>Primera y última muestra</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="upd2.jpg" alt="Momento 9">
+          <div class="caption">
+            <h3>Bombastik 💣</h3>
+            <p>Mi grupo de la secundaria </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="truco.jpg" alt="Momento 10">
+          <div class="caption">
+            <h3>TRUCO en horas libres🃏</h3>
+            <p>Este año mis amigas me enseñaron a jugar</p>
+          </div>
+        </div>
+
+
+         <div class="slide">
+          <img src="rincon.jpg" alt="Momento 11">
+          <div class="caption">
+            <h3>Nuestro rincón</h3>
+            <p>Nuestra esquina en el aula de italiano</p>
+          </div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+
+      </div>
+    </section>
+
+  </div>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let slides = document.querySelectorAll(".slide");
+      let currentIndex = 0;
+
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      // Auto-slide
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, 8000);
+
+      // ACORDEÓN
+      const botones = document.querySelectorAll(".acordeon-btn");
+
+      botones.forEach(btn => {
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("activo");
+
+          let contenido = btn.nextElementSibling;
+
+          if (btn.classList.contains("activo")) {
+            contenido.style.maxHeight = contenido.scrollHeight + "px";
+          } else {
+            contenido.style.maxHeight = 0;
+          }
+        });
+      });
+    });
+  </script>
+
+<section class="preguntas">
+  <h2>Reflexiones de todos estos años</h2>
+
+  <div class="acordeon dos-columnas">
+
+    <div class="item">
+      <button class="acordeon-btn">¿Qué es lo que más vas a extrañar de la escuela?</button>
+      <div class="acordeon-contenido">
+        <p>Voy a extrañar pasar tiempo con mis amigas.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Qué noche te gustó más en Bariloche?</button>
+      <div class="acordeon-contenido">
+        <p>La estudiantil.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Qué es lo que más te sorprendió este año?</button>
+      <div class="acordeon-contenido">
+        <p>Que se pasara tan rápido.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Qué año volverías a repetir y por qué?</button>
+      <div class="acordeon-contenido">
+        <p>Este, porque fue el año donde más compartí momentos con personas que quiero.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Con qué palabra definirías este último año?</button>
+      <div class="acordeon-contenido">
+        <p>Nostálgico.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">Algo que le dirías a tu yo del año que viene</button>
+      <div class="acordeon-contenido">
+        <p>Que no tenga miedo de cambiar de rumbo, que puede con todo eso.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Cuál fue tu ranking de outfits en Bariloche?</button>
+      <div class="acordeon-contenido">
+        <p>Estudiantil, banda, fluor, argentina, disfraces, purga, blanco, bizarra.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Artes Audiovisuales influyó en tu decisión de carrera?</button>
+      <div class="acordeon-contenido">
+        <p>No, no influyeron en mi decisión.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Elegirías de nuevo Artes Audiovisuales?</button>
+      <div class="acordeon-contenido">
+        <p>Seguiría eligiendo Artes Audiovisuales.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Tu anécdota más graciosa de Bariloche?</button>
+      <div class="acordeon-contenido">
+        <p>Cuando el cuatri se me fue a las piedras y me tuvieron que buscar.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Hay algún profesor o preceptor con el que generaste un vínculo importante?</button>
+      <div class="acordeon-contenido">
+        <p>No, pero hay algunos con los que tuve más trato que otros.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <button class="acordeon-btn">¿Qué le dirías a tu yo de primero?</button>
+      <div class="acordeon-contenido">
+        <p>Que no se castigue tanto, que estaba haciendo lo mejor que podía.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+ <a href="../../index.html" class="volver">⬅ Volver al anuario</a>
+  </div>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
+
+
