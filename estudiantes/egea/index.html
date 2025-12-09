@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camila Egea</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <header class="perfil">
+      <img src="recursos/fotos/estudiante01.png" alt="Camila Egea" class="foto-perfil" />
+      <h1>Camila Egea</h1>
+      <p>"La chica dibujos"</p>
+    </header>
+
+    <section class="historia">
+      <div class="texto">
+        <p>
+          Camila va al Ciclo Básico desde el jardín.
+        </p>
+        <p>
+          En 2023 eligió una orientación que le cambiaría la vida: el Bachiller en Artes Audiovisuales.
+        </p>
+        <p>
+          A su vez, a través de todos estos años, ha jugado al hockey, y recientemente salió campeona del CRC "C" Sub
+          19,
+          con el club Universitario, al que perteneció toda su vida.
+        </p>
+      </div>
+    </section>
+
+    <section class="podcast">
+      <h2>🎧 Mi mensaje para mis compañeros</h2>
+      <audio controls>
+        <source src="recursos/audios/Teddybears - Punkrocker (feat. Iggy Pop) [Official Video].mp3" type="audio/mpeg" />
+        Tu navegador no soporta el audio.
+      </audio>
+      <p>Podés reproducirlo mientras recorrés la página</p>
+    </section>
+
+    <!-- Sección Carrusel -->
+    <section class="fotos">
+      <h2>Momentos inolvidables</h2>
+      <div class="carousel-fade">
+        <div class="slide active">
+          <img src="recursos/fotos/recuerdo1.jpg" alt="Momento 1">
+          <div class="caption">
+            <h3>Final CRC "C" Sub 19 🏑</h3>
+            <p>Campeona con amigas</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/recuerdo2.jpg" alt="Momento 2">
+          <div class="caption">
+            <h3>La Vida es Corto 📷</h3>
+            <p>El mejor festival de cine del mundo</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/recuerdo3.jpg" alt="Momento 3">
+          <div class="caption">
+            <h3>Primeros pasos en Hockey 🏑</h3>
+            <p>Sol, risas y deporte</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/recuerdo4.jpg" alt="Momento 4">
+          <div class="caption">
+            <h3>Fotografías en la montaña</h3>
+            <p>Sesión de fotos en Bariloche</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/recuerdo5.jpg" alt="Momento 5">
+          <div class="caption">
+            <h3>Pinky Rosita a Mardel ⚽</h3>
+            <p>El fin de una etapa... y el inicio de otra</p>
+          </div>
+        </div>
+        <div class="slide">
+          <video width="100%" height="auto" controls style="border-radius: 10px;">
+            <source src="recursos/fotos/videopinckyrosa.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <div class="caption">
+            <h3>Pinky Rosita x2</h3>
+            <p>El festejo :)</p>
+          </div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+    </section>
+
+    <section class="parallax" aria-label="Imagen de fondo parallax" role="img"></section>
+
+    <section class="fotos">
+      <h2>Recorrido a la escuela</h2>
+      <div class="carousel-fade">
+        <div class="slide active">
+          <img src="recursos/fotos/Recorrido1.jpg" alt="Recorrido 1">
+          <div class="caption">
+            <h3>La entrada de la escuela</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/Recorrido2.jpg" alt="Recorrido 2">
+          <div class="caption">
+            <h3>El famoso Lepomm</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/Recorrido3.jpg" alt="Recorrido 3">
+          <div class="caption">
+            <h3>El banco de la esquina</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/Recorrido4.jpg" alt="Recorrido 4">
+          <div class="caption">
+            <h3>Gráfica Palermo</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/Recorrido5.jpg" alt="Recorrido 5">
+          <div class="caption">
+            <h3>La farmacia</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="recursos/fotos/Recorrido6.jpg" alt="Recorrido 6">
+          <div class="caption">
+            <h3>La YPF</h3>
+          </div>
+        </div>
+
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+    </section>
+
+    <section class="parallax" aria-label="Imagen de fondo parallax" role="img"></section>
+
+    <!-- SECCIÓN: MIS SERIES FAVORITAS -->
+    <section class="series-favoritas">
+      <h2>Mis series favoritas</h2>
+      
+      <div class="galeria-series">
+        <img src="recursos/fotos/serie1.png" alt="Arcane" data-serie="arcane" />
+        <img src="recursos/fotos/serie2.jpg" alt="The Last of Us" data-serie="lastofus" />
+        <img src="recursos/fotos/serie3.jpg" alt="Atypical" data-serie="atypical" />
+        <img src="recursos/fotos/serie4.jpg" alt="Stranger Things" data-serie="stranger" />
+      </div>
+
+      <!-- Descripción que aparece al hacer click -->
+      <div class="descripcion-serie" aria-live="polite"></div>
+    </section>
+
+  </div>
+  <div class="contenedor">
+
+    <!-- SECCIÓN: ACORDEÓN DE PREGUNTAS -->
+    <section class="preguntas">
+      <h2>Reflexiones del año</h2>
+
+      <div class="acordeon">
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Qué es lo que más vas a extrañar de la escuela?</button>
+          <div class="acordeon-contenido">
+            <p>La relación que hay en el curso, ya que esa armonía no se encuentra en todos lados</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Qué noche te gustó más en Bariloche?</button>
+          <div class="acordeon-contenido">
+            <p>La bizarra fue la que me pareció mas divertida</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">Si pudieras repetir un recuerdo, ¿cuál sería?</button>
+          <div class="acordeon-contenido">
+            <p>La primer semana de 4to año</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿En este año, qué persona te marcó?</button>
+          <div class="acordeon-contenido">
+            <p>Creo que me quedó con algo de casi todas las personas que conocí estos años</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Qué le dirías a tu "yo" del primer día de secundaria?</button>
+          <div class="acordeon-contenido">
+            <p>Que no sea ortiva y se junte lo más posible</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">Si tuvieras que describir este año con una película, ¿cuál sería?</button>
+          <div class="acordeon-contenido">
+            <p>...</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Qué persona de la escuela te dejó una enseñanza?</button>
+          <div class="acordeon-contenido">
+            <p>Yo creo que Sagasti fue de los profesores que mas enseñanzas me dejó</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Que es lo que más te sorprendió este año?</button>
+          <div class="acordeon-contenido">
+            <p>Que tuvimos menos del 70% de las clases</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Que año volverías a repetir de la secundaria? ¿Por qué?</button>
+          <div class="acordeon-contenido">
+            <p>Tercero y quinto; fueron los dos mejores</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Qué le dirías a tu yo del año que viene?</button>
+          <div class="acordeon-contenido">
+            <p>Que no sea vaga y siga tirando para adelante</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">Si tuvieras que elegir una canción que defina tu año ¿cuál sería?</button>
+          <div class="acordeon-contenido">
+            <p>Arrancarmelo de Wos</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Con qué palabra o frase definirías este último año en la secundaria?</button>
+          <div class="acordeon-contenido">
+            <p>Diferente</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Sentis que cambiaste mucho desde primero a sexto? ¿En qué? </button>
+          <div class="acordeon-contenido">
+            <p>Sí, ya no me junto con las mismas personas de hace 4 años, además mi personalidad cambió... pero creo que
+              sigo teniendo la misma esencia</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Cuál fue el año que más te gustó de los tres y cuál recordas con más
+            nostalgia?</button>
+          <div class="acordeon-contenido">
+            <p>El que más me gustó fue 5to, pero 4to es el que recuerdo con más nostalgia</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Cuál fue el momento más gracioso o bizarro con un profesor?</button>
+          <div class="acordeon-contenido">
+            <p>Cuando la profesora de psicología pensó que todos nos habíamos complotado para faltar y engañar a la
+              preceptora</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Cuál fue la materia que te dejó una enseñanza para el futuro?</button>
+          <div class="acordeon-contenido">
+            <p>Creo que todas aportaron algunas cosas, pero la mas significativa desde lo social fue construcción del
+              espacio en 5to</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Creés que estos 3 años en Artes Audiovisuales influyeron en tu decisión sobre
+            que carrera vas a estudiar próximamente?</button>
+          <div class="acordeon-contenido">
+            <p>Siempre supe que quería seguir una carrera relacionada a las artes, pero esta orientación me hizo
+              confirmar mi decisión</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Cuál fue tu ranking de outfits en bariloche?</button>
+          <div class="acordeon-contenido">
+            <p>1 Estudiantina 3 Argentina 2 Gala</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Hay algún profesor/preceptor con el que generaste un vínculo
+            importante?</button>
+          <div class="acordeon-contenido">
+            <p>Con ninguno</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">Si pudieras hablar con tu yo de 4to año ¿qué le dirías?</button>
+          <div class="acordeon-contenido">
+            <p>Que trate de disfrutarlo lo mas posible porque se pasa mas rápido de lo que uno espera</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Podés mencionar tu anécdota mas graciosa de Bariloche?</button>
+          <div class="acordeon-contenido">
+            <p>Cuándo Ainoha se cayó al barro en el Tom Wesley</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Cuál fue tu momento más divertido del año?</button>
+          <div class="acordeon-contenido">
+            <p>La última semana de clases</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Te quedaste con ganas de hacer algo en Bariloche?</button>
+          <div class="acordeon-contenido">
+            <p>Me quedé con ganas de quedarme mas tiempo en algunas noches</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-btn">¿Ahora que terminas 6TO en artes audiovisuales, si volvieras a tercero, elegirías
+            de nuevo esta orientación o elegirías otra?</button>
+          <div class="acordeon-contenido">
+            <p>Elegiría esta otra vez</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="../../index.html" class="volver">⬅ Volver al anuario</a>
+  </div>
+  </div>
+
+  <!-- Modal para imagen ampliada -->
+  <div id="modal-imagen" class="modal-imagen">
+    <span class="cerrar-modal">&times;</span>
+    <img class="modal-contenido" id="img-ampliada" alt="Imagen ampliada">
+  </div>
+
+  <footer>
+    <p>6ºB ARTES AUDIOVISUALES</p>
+    <p>Escuela Normal Superior "Vicente Fatone" - EPUNS - UNS</p>
+    <p>&COPY; 2025 - BAHÍA BLANCA - BUENOS AIRES - ARGENTINA</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

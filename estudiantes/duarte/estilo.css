@@ -1,0 +1,496 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-image: url(recursos/fotos/Fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+  }
+  
+  .contenedor {
+    min-width: 500px;
+    width: 80%;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeUpZoom 1s ease;
+  }
+  
+  /* --- PERFIL --- */
+  .perfil {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+  
+  /* --- HISTORIA --- */
+  .historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  .texto {
+    flex: 1;
+    text-align: justify;
+  }
+  
+  .imagen-lateral {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* --- ITEMS --- */
+  .items {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .items h2 {
+    color:#591456;
+  }
+
+  .items ul {
+    list-style: "🌷";    
+    padding-left: 0px;
+    text-align: center;
+    list-style-position: inside;
+    
+  }
+
+  /* --- PODCAST --- */
+  .podcast {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .podcast audio {
+    width: 100%;
+    max-width: 400px;
+  }
+
+/* Efecto parallax */
+  .parallax {
+    background-image: url('recursos/fotos/Parallax.jpg');
+    /* Mostrar la imagen más grande: aumentar la altura del contenedor */
+    height: 90vh;
+    min-height: 420px;
+    /* Mantener efecto parallax en escritorio */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat; /* evita que la imagen se multiplique */
+    background-size: cover; /* escala para cubrir el área sin repetirse */
+    background-color: #000; /* fallback mientras carga la imagen */
+    display: block;
+  }
+
+  /* En móviles algunos navegadores ignoran background-attachment: fixed; usar scroll allí */
+  @media (max-width: 700px) {
+    .parallax {
+      background-attachment: scroll;
+      height: 50vh;
+    }
+  }
+
+  /* --- CARRUSEL CON EFECTO FADE --- */
+  .fotos {
+    margin: 60px 0 60px 0;
+    padding: 60px 20px;
+    background: #f2ffdf;
+  }
+  
+  .fotos h2 {
+    font-size: 2em;
+    color:#042e12;
+  }
+  
+  .carousel-fade {
+    position: relative;    
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 70vh; /* usar vh para que la imagen sea grande según la pantalla */
+    max-height: 820px; /* evita que crezca demasiado en pantallas muy altas */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+    opacity: 1;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 70vh; /* imagen crece con la ventana */
+    max-height: 820px; /* límite para mantener calidad */
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .momentos h2 {
+    color:#591456
+  }
+  
+  /* --- Texto sobre las imágenes --- */
+  .caption {
+    margin: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    animation: fadeText 1s ease;
+  }
+  
+  .caption h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+  
+  .caption p {
+    font-size: 1.1em;
+    margin: 0;
+  }
+  
+  @keyframes fadeText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Botones */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .prev { left: 15px; }
+  .next { right: 15px; }
+  
+  /* Ajuste para pantallas chicas */
+  @media (max-width: 600px) {
+    .slide {
+      height: 45vh;
+    }
+
+    .slide img {
+      height: 45vh;
+      width: 100%;
+    }
+  
+    .caption h3 {
+      font-size: 1.3em;
+    }
+  
+    .caption p {
+      font-size: 1em;
+    }
+  }
+  /* Sección estudiantes */
+  .estudiantes  {
+    padding: 60px 20px;
+  }
+  
+  .estudiantes  h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #444;
+  }
+  
+  /* Cards */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+  
+  .card p {
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeUpZoom {
+    from { opacity: 0; transform: scale(0.8) translateY(50px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  
+  /* --- BOTÓN VOLVER --- */
+  .volver {
+    display: inline-block;
+    background: #da9cd4;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .volver:hover {
+    background: #b76fd3;
+  }
+  
+  /* --- ANIMACIONES --- */
+  @keyframes fadeUpZoom {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* --- RESPONSIVE --- */
+  @media (max-width: 700px) {
+    .historia {
+      flex-direction: column;
+    }
+    .imagen-lateral {
+      width: 100%;
+    }
+  }
+  
+
+/* --- ACORDEÓN --- */
+.preguntas {
+    margin-top: 40px;
+  }
+  
+  .preguntas h2 {
+    color: #591456;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .acordeon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+  
+  .acordeon-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.acordeon-btn {
+  width: 100%;
+  background: #da9cd4;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  outline: none;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 0;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.acordeon-contenido {
+  background: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  margin-top: 8px;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.acordeon-contenido.activo {
+  padding: 15px;
+  max-height: 400px; /* aumentar si necesitas más espacio */
+}
+
+/* Responsive: 1 columna en pantallas pequeñas */
+@media (max-width: 700px) {
+  .acordeon {
+    grid-template-columns: 1fr;
+  }
+}
+  
+  .acordeon-btn:hover {
+    background: #b279de;
+  }
+  
+  .acordeon-contenido p {
+    margin: 15px 0;
+  }
+  
+  /* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  /* Sección superior */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  /* Sección de texto */
+  .contenido {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+  }
+  
+  /* Pequeña mejora visual */
+  .contenido:nth-of-type(even) {
+    background-color: #ffffff;
+  }
+  
+  footer {
+    background: #f2ffdf;
+    color: rgb(8, 46, 13);
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 0.9em;
+    margin-top: 50px;
+  }
+
+  /* Lightbox / modal para ampliar imágenes */
+  .lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease;
+  }
+
+  .lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lightbox-img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    background: #000;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    font-size: 28px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1210;
+  }
