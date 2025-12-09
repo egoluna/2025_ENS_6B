@@ -1,0 +1,447 @@
+body {
+    margin: 0;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+    background: url(recursos/fotos/Fondo.jpeg);
+    color: #333;
+  }
+  
+  .contenedor {
+    min-width: 500px;
+    width: 80%;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeUpZoom 1s ease;
+  }
+
+
+  h2 {
+    text-align: center;
+}
+  
+  /* --- PERFIL --- */
+  .perfil {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+  
+  /* --- HISTORIA --- */
+  .historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .texto {
+    flex: 1;
+    text-align: justify;
+  }
+  
+  .imagen-lateral {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* --- LISTADO --- */
+  .intereses {
+    margin-bottom: 40px;
+  }
+  
+  .intereses h2 {
+    color: #1976d2;
+  }
+  
+  .intereses ul {
+    list-style: "⭐ ";
+    padding-left: 20px;
+  }
+  
+  /* --- PODCAST --- */
+  .podcast {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .podcast audio {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* --- BOTÓN VOLVER --- */
+  .volver {
+    display: inline-block;
+    background: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .volver:hover {
+    background: #0d47a1;
+  }
+  
+  /* --- ANIMACIONES --- */
+  @keyframes fadeUpZoom {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* --- RESPONSIVE --- */
+  @media (max-width: 700px) {
+    .historia {
+      flex-direction: column;
+    }
+    .imagen-lateral {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+/* --- ACORDEÓN --- */
+.preguntas {
+    margin-top: 40px;
+  }
+  
+  .preguntas h2 {
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .acordeon {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .acordeon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+  
+  .acordeon-item {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.acordeon-btn {
+  width: 100%;
+  background: cadetblue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  outline: none;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 0;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.acordeon-contenido {
+  background: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  margin-top: 8px;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.acordeon-contenido.activo {
+  padding: 15px;
+  max-height: 400px;
+}
+
+
+@media (max-width: 700px) {
+  .acordeon {
+    grid-template-columns: 1fr;
+  }
+}
+  
+  .acordeon-btn:hover {
+    background: #7b7fc9;
+  }
+  
+  .acordeon-contenido p {
+    margin: 15px 0;
+  }
+  .acordeon-btn {
+    width: 100%;
+    background:  cadetblue;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    outline: none;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+  }
+  
+  .acordeon-btn:hover {
+    background: cadetblue;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+  }
+  
+  .acordeon-contenido {
+    background: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .acordeon-contenido p {
+    margin: 15px 0;
+  }
+  
+
+  .acordeon-contenido.activo {
+    padding: 15px;
+    max-height: 200px;
+  }
+  
+   .parallax {
+    background-image: url(recursos/fotos/Parallax.jpeg);
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+
+
+   /* --- CARRUSEL CON EFECTO FADE --- */
+  .momentos {
+    padding: 60px 20px;
+    background: #f0f0f0;
+  }
+  
+  .momentos h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .carousel-fade {
+    position: relative;    
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+    opacity: 1;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  /* --- Texto sobre las imágenes --- */
+  .caption {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    animation: fadeText 1s ease;
+  }
+  
+  .caption h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+  
+  .caption p {
+    font-size: 1.1em;
+    margin: 0;
+  }
+  
+  @keyframes fadeText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Botones */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .prev { left: 15px; }
+  .next { right: 15px; }
+  
+  /* Ajuste para pantallas chicas */
+  @media (max-width: 600px) {
+    .slide img {
+      height: 300px;
+      width: 100%;
+    }
+  
+    .caption h3 {
+      font-size: 1.3em;
+    }
+  
+    .caption p {
+      font-size: 1em;
+    }
+  }
+  /* Sección estudiantes */
+  .estudiantes  {
+    padding: 60px 20px;
+  }
+  
+  .estudiantes  h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #444;
+  }
+  
+  /* Cards */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 10px 0 5px;
+  }
+  
+  .card p {
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeUpZoom {
+    from { opacity: 0; transform: scale(0.8) translateY(50px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+/* Centrado horizontal sin ocupar la pantalla */
+.contenedor-video {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    margin: 20px 0;           /* Espacio arriba y abajo */
+}
+
+/* Ajuste del tamaño del video (opcional y responsivo) */
+video {
+    max-width: 80%;           /* Se adapta al contenedor */
+    height: auto;
+}
