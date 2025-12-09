@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+    color: #333;
+  }
+  
+  .contenedor {
+    min-width: 500px;
+    width: 80%;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeUpZoom 1s ease;
+  }
+  
+  /* --- PERFIL --- */
+  .perfil {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+  
+  /* --- HISTORIA --- */
+  .historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .texto {
+    flex: 1;
+    text-align: justify;
+  }
+  
+  .imagen-lateral {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* --- LISTADO --- */
+  .intereses {
+    margin-bottom: 40px;
+  }
+  
+  .intereses h2 {
+    color: #1976d2;
+  }
+  
+  .intereses ul {
+    list-style: "⭐ ";
+    padding-left: 20px;
+  }
+  
+ /* --- CARRUSEL CON EFECTO FADE --- */
+  .fotos {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fotos h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+.carousel-fade {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+} 
+
+  .slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 15px 15px;
+}
+
+.caption h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.caption p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.parallax {
+  width: 100%;
+  height: 70vh;
+
+  background-image: url("recursos/fotos/Parallax.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+  /* --- PODCAST --- */
+  .podcast {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .podcast audio {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* --- BOTÓN VOLVER --- */
+  .volver {
+    display: inline-block;
+    background: #e771f1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .volver:hover {
+    background: #b816d8;
+  }
+  
+  /* --- ANIMACIONES --- */
+  @keyframes fadeUpZoom {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* --- RESPONSIVE --- */
+  @media (max-width: 700px) {
+    .historia {
+      flex-direction: column;
+    }
+    .imagen-lateral {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+/* --- ACORDEÓN --- */
+.preguntas {
+    margin-top: 40px;
+    columns: 2;
+  }
+  
+  .preguntas h2 {
+    color: #3f0477;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .acordeon {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .acordeon-btn {
+    width: 100%;
+    background: #c65cd4;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    outline: none;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .acordeon-btn:hover {
+    background: #8f45b9;
+  }
+  
+  .acordeon-contenido {
+    background: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .acordeon-contenido p {
+    margin: 15px 0;
+  }
+  
+  /* Cuando se abre */
+  .acordeon-contenido.activo {
+    padding: 15px;
+    max-height: 200px;
+  }
+  
